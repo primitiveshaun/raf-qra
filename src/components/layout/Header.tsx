@@ -65,7 +65,7 @@ function NavLink({ children, href, active }: NavLinkProps) {
       className={`relative text-sm font-medium tracking-wide transition-colors ${
         active
           ? "text-white border-b-2 border-red pb-1"
-          : "text-white opacity-80 transition-opacity duration-300 ease-in-out hover:opacity-100 focus:opacity-100 focus:outline-none"
+          : "text-white opacity-80 transition-transform duration-300 ease-out hover:opacity-100 hover:-translate-y-0.5 focus:opacity-100 focus:outline-none"
       }`}
     >
       {children}

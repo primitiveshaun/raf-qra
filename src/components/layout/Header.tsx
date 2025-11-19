@@ -26,7 +26,7 @@ export function Header() {
             />
           </div>
           {/* Cadets Tab */}
-          <div className="flex items-center text-blue font-medium opacity-40 text-sm px-6 py-5 bg-white rounded-br-lg">
+          <div className="flex items-center text-blue font-medium opacity-40 text-sm px-6 py-5 bg-white rounded-br-lg hover:opacity-80 transition-opacity duration-500 ease-in-out">
             Cadets
           </div>
         </div>

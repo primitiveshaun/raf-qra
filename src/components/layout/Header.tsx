@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import SearchIcon from "@/components/ui/SearchIcon"
+import ArrowIcon from "@/components/ui/ArrowIcon"
 
 
 export function Header() {
@@ -45,7 +46,7 @@ export function Header() {
         <NavLink href="#">Community & Support</NavLink>
         <NavLink href="#">News</NavLink>
         <NavLink href="#"><SearchIcon /></NavLink>
-        <NavLink href="#">Join the RAF</NavLink>
+        <NavLink href="#"><span className="pe-3">Join the RAF</span> <ArrowIcon width = '11' height = '7' className="absolute -rotate-40 -top-1 right-0" /></NavLink>
       </nav>
     </header>
   )

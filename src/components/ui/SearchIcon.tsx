@@ -6,7 +6,12 @@
  * @param {string} [props.size='24'] - The width and height of the icon (in pixels, e.g., '24').
  * @param {string} [props.className=''] - Additional Tailwind CSS classes to apply.
  */
-const SearchIcon = ({ color = 'currentColor', size = '24', className = '', ...rest }) => {
+const SearchIcon = ({
+    color = 'currentColor', 
+    size = '24', 
+    className = '', 
+    ...rest 
+}) => {
   return (
     <svg
       width={size}

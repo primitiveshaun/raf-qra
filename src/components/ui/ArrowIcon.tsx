@@ -15,7 +15,6 @@ const ArrowIcon = ({
     ...rest 
 }) => {
   
-  // Note: The viewBox is 23x15, so the default dimensions match the original scale.
   return (
     <svg
       width={width}

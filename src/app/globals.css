@@ -1,8 +1,56 @@
 @import "tailwindcss";
 
-/* ---------------------- */
-/* Myriad Pro Font Faces   */
-/* ---------------------- */
+/* -------------------------------- */
+/* Tailwind v4 Theme Config         */
+/* -------------------------------- */
+@theme {
+  --color-red: #C60C30;
+  --color-red-light: #FA0C3A;
+  --color-blue: #002F5F;
+  --color-white: #FFFFFF;
+  --color-gray: #535353;
+  --color-dark: #232B2A;
+  --color-link: #000000;
+
+  --font-myriad: 'Myriad Pro', sans-serif;
+
+  --text-h1: 60px;
+  --leading-h1: 1;
+  --tracking-h1: 1px;
+
+  --text-h2: 44px;
+  --leading-h2: 1;
+  --tracking-h2: 1px;
+
+  --text-h3: 30px;
+  --leading-h3: 1;
+  --tracking-h3: 0.5px;
+
+  --text-h4: 24px;
+  --leading-h4: 1;
+  --tracking-h4: 1px;
+
+  --text-h5: 20px;
+  --leading-h5: 1;
+  --tracking-h5: 1px;
+
+  --text-standfirst: 24px;
+  --leading-standfirst: 32px;
+  --tracking-standfirst: 0.5px;
+
+  --text-bold: 20px;
+  --leading-bold: 28px;
+  --tracking-bold: 1px;
+
+  --text-body: 19px;
+  --leading-body: 24px;
+  --tracking-body: 0.5px;
+}
+
+/* -------------------------------- */
+/* Fonts                            */
+/* -------------------------------- */
+
 @font-face {
   font-family: 'Myriad Pro';
   src: url('/fonts/MyriadPro-Regular.woff') format('woff');
@@ -27,135 +75,25 @@
   font-display: swap;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Myriad Pro';
   src: url('/fonts/MyriadPro-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
+} */
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('/fonts/MyriadPro-Bold.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* ---------------------- */
-/* CSS Variables          */
-/* ---------------------- */
-:root {
-  --color-primary-red: #C60C30;
-  --color-primary-blue: #002F5F;
-  --color-light-red: #FA0C3A;
-  --color-white: #FFFFFF;
-  --color-gray: #535353;
-  --color-body-text: #232B2A;
-  --color-link: #000000;
-
-  --font-myriad: 'Myriad Pro', sans-serif;
-}
-
-/* ---------------------- */
-/* Base Styles            */
-/* ---------------------- */
-html,
-body {
-  font-family: var(--font-myriad);
-  color: var(--color-body-text);
-  background-color: var(--color-gray);
-  line-height: 1.25;
+/* Basic reset */
+html, body {
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ---------------------- */
-/* Headings               */
-/* ---------------------- */
-h1 {
-  font-weight: 900;
-  font-size: 60px;
-  letter-spacing: 1px;
-  line-height: 1;
-}
-
-h2 {
-  font-weight: 900;
-  font-size: 44px;
-  letter-spacing: 1px;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-weight: 900;
-  font-size: 30px;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-h4 {
-  font-weight: 900;
-  font-size: 24px;
-  letter-spacing: 1px;
-  line-height: 1;
-}
-
-h5 {
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 1px;
-  line-height: 1;
-  text-transform: capitalize;
-}
-
-/* ---------------------- */
-/* Standfirst / Bold       */
-/* ---------------------- */
-.standfirst {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0.5px;
-}
-
-.bold {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 1px;
-}
-
-/* ---------------------- */
-/* Body Text              */
-/* ---------------------- */
-p,
-span,
-li {
-  font-weight: 400;
-  font-size: 19px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  vertical-align: middle;
-}
-
-/* ---------------------- */
-/* Hyperlinks             */
-/* ---------------------- */
-a {
-  color: var(--color-link);
-  text-decoration: underline;
-}
-
-a:hover {
-  opacity: 0.8;
-  text-decoration: none;
-}
-
-/* ---------------------- */
-/* Utility Classes        */
-/* ---------------------- */
-.uppercase {
-  text-transform: uppercase;
-}
-
-.capitalize {
-  text-transform: capitalize;
+  font-family: var(--font-myriad);
 }

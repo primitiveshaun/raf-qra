@@ -1,20 +1,17 @@
 /**
- * A search icon component.
+ * A search icon component. Defaults to 24x24px.
  *
  * @param {object} props
- * @param {string} [props.color='currentColor'] - The fill color of the icon. Defaults to 'currentColor' 
- * to inherit parent's text color, or change to 'black' 
- * if you need an explicit default.
- * @param {string} [props.size='28'] - The width and height of the icon.
+ * @param {string} [props.color='currentColor'] - The fill color of the icon.
+ * @param {string} [props.size='24'] - The width and height of the icon (in pixels, e.g., '24').
  * @param {string} [props.className=''] - Additional Tailwind CSS classes to apply.
  */
-const SearchIcon = ({ color = 'currentColor', size = '28', className = '', ...rest }) => {
-  // Use the size prop for width and height, and combine any other classes
+const SearchIcon = ({ color = 'currentColor', size = '24', className = '', ...rest }) => {
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 28 28"
+      viewBox="0 0 36 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -26,6 +23,7 @@ const SearchIcon = ({ color = 'currentColor', size = '28', className = '', ...re
         d="M21.6045 21.4395C24.8104 18.2997 24.864 13.1555 21.7242 9.94961C18.5845 6.74371 13.4403 6.6901 10.2344 9.82987C7.02847 12.9696 6.97486 18.1138 10.1146 21.3197C13.2544 24.5256 18.3986 24.5792 21.6045 21.4395ZM22.654 22.5111C26.4518 18.7917 26.5153 12.6978 22.7959 8.90006C19.0765 5.1023 12.9826 5.03879 9.18483 8.75821C5.38707 12.4776 5.32356 18.5715 9.04298 22.3693C12.7624 26.167 18.8563 26.2306 22.654 22.5111Z"
         fill={color}
       />
+
       <path
         d="M21.3793 22.3014L22.4509 21.2519L29.1855 28.1283C29.4754 28.4243 29.4704 28.8991 29.1745 29.1889C28.8785 29.4788 28.4037 29.4738 28.1139 29.1779L21.3793 22.3014Z"
         fill={color}

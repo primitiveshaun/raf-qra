@@ -6,7 +6,7 @@ import MapPanel from "./components/MapPanel";
 import QraStepper from "./components/QRAStepper";
 import StepProgressBar from "./components/StepProgressBar";
 
-import { RadarInterface } from "./components/RadarInterface";
+// import ThreatDetection from "./components/ThreatDetection";
 
 export default function QRA() {
   const steps = [
@@ -45,15 +45,15 @@ export default function QRA() {
           </div>
         </div>
 
-        <RadarInterface />
+        
       </main>
 
       {/* Conditional Rendering using && */}
-      {currentStepIndex === 0 && (
+      {/* {currentStepIndex === 0 && (
         <div className="absolute h-screen w-screen z-0">
-          <p>Show Threat</p>
+          <ThreatDetection />
         </div>
-      )}
+      )} */}
 
       {/* Step Progress Bar */}
 

@@ -5,7 +5,7 @@ import ButtonDanger from "@/components/ui/ButtonDanger";
 
 import CountdownTimer from "./components/CountdownTimer";
 
-interface Step3Props {
+interface Step4Props {
   onAdvance: () => void; // A function to advance the step
 }
 
@@ -48,7 +48,7 @@ const itemVariants: Variants = {
   },
 };
 
-export default function Step3({ onAdvance }: Step3Props) {
+export default function Step4({ onAdvance }: Step4Props) {
   const handleClick = () => {
     // console.log("Button clicked! Advancing step...");
     onAdvance(); // <-- This executes goToNextStep() in the HOC
@@ -69,10 +69,10 @@ export default function Step3({ onAdvance }: Step3Props) {
       {/* Step Text */}
       <motion.div variants={itemVariants} className="mt-10 mb-12">
         <h1 className="text-white text-h3 tracking-wider uppercase font-bold mb-2">
-          Report Incursion
+          CO-ORDINATE RESPONSE
         </h1>
         <p className="text-white text-h4">
-          <strong>RAF Boulmer</strong> contacts command.
+          step 4.
         </p>
       </motion.div>
 

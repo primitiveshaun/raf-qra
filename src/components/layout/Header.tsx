@@ -6,7 +6,7 @@ import ArrowIcon from "@/components/ui/ArrowIcon"
 
 export function Header() {
   return (
-    <header className="flex items-stretch h-16 relative z-50 border-t-[5px] border-blue">
+    <header className="w-full absolute top-0 left-0 flex items-stretch h-16 z-50 border-t-[5px] border-blue">
 
       {/* Logo Section */}
       <div className="flex items-center px-6 ">

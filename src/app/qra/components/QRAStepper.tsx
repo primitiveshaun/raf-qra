@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Step1 from "../qra-step1";
 import Step2 from "../qra-step2";
 import Step3 from "../qra-step3";
+import Step4 from "../qra-step3";
 
 // Define Props Interface
 interface QraStepperProps {
@@ -18,6 +19,7 @@ const steps = [
     <Step1 key={0} onAdvance={onAdvance} />, 
     <Step2 key={1} onAdvance={onAdvance} />, // It's good practice to pass it to all steps
     <Step3 key={2} onAdvance={onAdvance} />,
+    <Step4 key={3} onAdvance={onAdvance} />,
   ];
 
   return (

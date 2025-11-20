@@ -2,10 +2,13 @@
 import Image from "next/image";
 import MapMarker from "./MapMarker";
 
-export default function MapPanel() {
+interface MapPanelProps {
+  currentStepIndex: number; // Expects step from the parent
+}
+
+export default function MapPanel({ currentStepIndex }: MapPanelProps) {
   return (
     <div className="relative w-[600px] h-full ml-auto text-white flex items-center justify-center">
-
       {/* MAP IMAGE / SVG */}
       <div className="relative ml-auto inset-0 min-h-[854px] min-w-[565px]">
         <Image
@@ -20,13 +23,46 @@ export default function MapPanel() {
       </div>
 
       {/* MARKERS — positioned by top/right */}
-      <MapMarker top="18%" right="40%" onClick={() => alert("Threat A")} />
-      <MapMarker top="42%" right="30%" onClick={() => alert("Threat B")} />
+
+      {currentStepIndex === 2 ? (
+        <MapMarker
+          top="18%"
+          right="40%"
+          pulsing
+          onClick={() => alert("Handle Location Selection")}
+        />
+      ) : (
+        <MapMarker top="18%" right="40%" />
+      )}
+
+      {currentStepIndex === 1 || currentStepIndex === 2 ? (
+        <MapMarker
+          top="42%"
+          right="30%"
+          pulsing
+          onClick={() => alert("Threat B")}
+        />
+      ) : (
+        <MapMarker
+          top="42%"
+          right="30%"
+          onClick={() => alert("Show Location Info?")}
+        />
+      )}
+
       <MapMarker top="68%" right="17%" />
       <MapMarker top="80%" right="23%" />
-      <MapMarker top="85%" right="29%" />
 
+      {currentStepIndex === 2 ? (
+        <MapMarker
+          top="85%"
+          right="29%"
+          pulsing
+          onClick={() => alert("Handle Location Selection")}
+        />
+      ) : (
+        <MapMarker top="85%" right="29%" />
+      )}
     </div>
   );
 }
-
